@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 9</title>
+    <script type="text/javascript">
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "./BACKEND/E9.php",true);
+        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        ajax.send();
+        ajax.onreadystatechange = () => 
+        {
+            if (ajax.readyState == 4 && ajax.status == 200) 
+            {
+                var arrayDeAutos = JSON.parse(ajax.responseText);
+                //console.log(arrayDeAutos);
+                //console.log(arrayDeAutos[999]);
+                // Dibujo una tabla
+                var tabla = '<table align="center" border="1"><tr><td>ID</td><td>MARCA</td><td>PRECIO</td><td>COLOR</td><td>MODELO</td><td>ACCIONES</td></tr>'
+                arrayDeAutos.forEach(element => {
+                    console.log('ID: ' + element.Id + ' Marca: ' + element.Marca 
+                            + ' Precio: ' + element.Precio + ' Color: ' + element.Color
+                            + ' Modelo: ' + element.Modelo);
+                    tabla += '<tr><td>' + element.Id + 
+                            '</td><td>' + element.Marca + 
+                            '</td><td>' + element.Precio + 
+                            '</td><td>' + element.Color + 
+                            '</td><td>' + element.Modelo + 
+                            '</td>' + "<td><input type='button' value='Mostrar' onclick='VerAuto(" + JSON.stringify(element) + ")'></td>" +
+                            '</tr>';     
+                });
+                document.write(tabla);
+            }
+        }
+
+        function VerAuto(objAuto)
+        {
+            console.log(objAuto);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

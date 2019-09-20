@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+    <script type="text/javascript">
+        var obj = {"codigoBarra":111,"nombre":"Lapicera","precio":35};
+        console.log("Objeto desde js con precio viejo:");
+        console.log(obj);
+        //alert(JSON.stringify(obj));
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "./BACKEND/E1.php",true);
+        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        ajax.send("miProducto=" + JSON.stringify(obj));
+        ajax.onreadystatechange = () => 
+        {
+            if (ajax.readyState == 4 && ajax.status == 200) 
+            {
+                console.log("Objeto manipulado en PHP:");
+                console.log(JSON.parse(ajax.responseText));
+            }
+        }
+    </script>
+</head>
+<body>
+    Mostrando por consola y alert el json generado en el encabezado!! :)
+</body>
+</html>
