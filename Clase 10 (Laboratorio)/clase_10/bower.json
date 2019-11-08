@@ -1,0 +1,21 @@
+{
+  "name": "clase_x",
+  "authors": [
+    "genma2612 <manuelagustingonzalez@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "latest",
+    "jquery": "latest"
+  }
+}

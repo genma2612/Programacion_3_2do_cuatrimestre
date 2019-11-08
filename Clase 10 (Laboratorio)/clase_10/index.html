@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <!-- bootstrap 4
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" style="background-color:rosybrown">
+            <p class="small text-center">Columnas Responsive</p>
+            <div class="row">
+                    <div class="col-sm-6 col-md-4" style="background-color:darksalmon">C1</div>
+                    <div class="col-sm-3 col-md-4" style="background-color:forestgreen">C2</div> 
+                    <div class="col-sm-3 col-md-4" style="background-color:lightslategrey">C3</div>                
+                </div> 
+                <div class="row">
+                    <div class="col-sm-2 col-md-3" style="background-color:darkslategray">C1</div>
+                    <div class="col-sm-8 col-md-3" style="background-color:darkcyan">C2</div> 
+                    <div class="col-sm-1 col-md-3" style="background-color:rebeccapurple">C3</div>
+                    <div class="col-sm-1 col-md-3" style="background-color:darkolivegreen">C4</div>                                
+                </div>   
+    <br>
+    </div>  
+    <br>
+    <div class="container" style="background-color:royalblue">
+            <p class="small text-center">Imagenes Responsive</p>
+            <div class="row">
+                    <div class="col-sm-3 col-md-4" style="">
+                    <img src="imagenes/paris.jpg" class="img-fluid rounded" alt="Cinque Terre">
+                    </div>
+                    <div class="col-sm-3 col-md-4" style="">
+                    <img src="imagenes/paris.jpg" class="img-fluid rounded-circle" alt="Cinque Terre">
+                    </div> 
+                    <div class="col-sm-3 col-md-4" style="">
+                    <img src="imagenes/paris.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre">                    
+                    </div>                
+            </div> 
+    <br>
+    </div> 
+    <br>
+    <div class="container" style="background-color:royalblue">
+            <p class="small text-center">Alerts</p>
+            <div class="row">
+                    <div class="col-sm-3 col-md-4" style="">
+                    <div class="alert alert-success">Exito!</div>
+                    </div>
+                    <div class="col-sm-3 col-md-4" style="">
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#miVentanitaModal">
+                            Ventana Modal
+                            </button>
+                    </div> 
+                    <div class="col-sm-3 col-md-4" style="">
+
+                    </div>                
+            </div> 
+    <br>
+    </div>  
+
+    <!-- Ventana modal -->
+
+    <div id="miVentanitaModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Encabezado...</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Hola Mundo!...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+</html>
